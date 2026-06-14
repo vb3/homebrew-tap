@@ -9,7 +9,9 @@ as your desktop picture across all displays. See
 [vb3/BingWallpaper-for-Mac](https://github.com/vb3/BingWallpaper-for-Mac).
 
 ```sh
-brew install --cask vb3/tap/bingwallpaper
+brew tap vb3/homebrew-tap
+brew trust vb3/tap          # Homebrew 6+ asks you to trust third-party taps
+brew install --cask bingwallpaper
 ```
 
 To upgrade later:
