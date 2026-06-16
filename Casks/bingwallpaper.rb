@@ -1,6 +1,6 @@
 cask "bingwallpaper" do
-  version "0.5.4"
-  sha256 "05f2f3ebf02ea916fdc6aa21cb8249a57121580c69f7764da190c937701b4cf6"
+  version "0.6.0"
+  sha256 "6ea99d96eed19427b115a8f64cc2ce8fe349dc1f75df59bb0f416365610687e6"
 
   url "https://github.com/vb3/BingWallpaper-for-Mac/releases/download/v#{version}/BingWallpaper_v#{version}.zip"
   name "BingWallpaper"
