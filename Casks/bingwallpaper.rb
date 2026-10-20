@@ -16,11 +16,13 @@ cask "bingwallpaper" do
 
   app "BingWallpaper.app"
 
-  postflight do
+  postflight_steps do
     # The build is ad-hoc signed (not notarized), so strip the quarantine
     # attribute Homebrew sets on download to avoid a Gatekeeper block on first launch.
-    system_command "/usr/bin/xattr",
-                   args: ["-dr", "com.apple.quarantine", "#{appdir}/BingWallpaper.app"]
+    run "/usr/bin/xattr",
+        args:           ["-dr", "com.apple.quarantine", "{{appdir}}/BingWallpaper.app"],
+        writable_paths: ["BingWallpaper.app"],
+        writable_base:  :appdir
   end
 
   uninstall quit: "com.vb3.BingWallpaper"
